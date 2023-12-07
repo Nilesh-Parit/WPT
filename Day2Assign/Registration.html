@@ -1,29 +1,44 @@
 <html>
     <head>
-        <title>
-            Registration Form
-        </title>
+        <title>Registration Form</title>
     </head>
+
     <body>
-    
     <fieldset>
-        <legend>
-            Register 
-        </legend>
+        <h2 style="text-align: center;">Registration Form</h2>
+        <fieldset>
+        <legend>Personal Information</legend><br>
         <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br><br>
+        <label>Last Name : <input type="text" placeholder="Enter Last Name"/></label><br> <br>
         Select Date : <input type = "date"/> <br> <br>
-        Enter Address : <input type = "text"/> <br> <br>
+        Enter Address : <input type = "text" placeholder="Enter Address"/> <br> <br>
+        State :
         <select>
             <option>Select State </option>
-            <option>M.P.</option>
             <option>Maharashtra</option>
+            <option>M.P.</option>
             <option>A.P.</option>
             <option>H.P.</option>
             <option>Punjab</option>
             <option>Goa</option>
         </select>
-
+        </fieldset><br><br>
+        <fieldset>
+            <legend>Educational Details</legend><br>
+            <label>S.S.C : <input type="checkbox"/></lable>
+                <label><input type="text" placeholder="Enter Marks"></label><br><br>
+                <label>H.S.C : <input type="checkbox" /></label>
+                <label><input type="text" placeholder="Enter Marks"></label><br><br>
+                <label>Diploma : <input type="checkbox" /></label>
+                <label><input type="text" placeholder="Enter Marks"></label><br><br>
+                <label>B.E/B.Tech : <input type="checkbox"/></label>
+                <label><input type="text" placeholder="Enter Marks"></label><br><br>
+                <label>M.E/M.Tech : <input type="checkbox"/></label>
+                <label><input type="text" placeholder="Enter Marks"></label><br><br>
+                <label>Phd: <input type="checkbox"/></label>
+                <label><input type="text" placeholder="Enter Marks"></label><br>
+        </fieldset>
     </fieldset>
 
 
