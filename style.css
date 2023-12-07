@@ -1,0 +1,17 @@
+.container{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.margin-btwn{
+    margin: 1px;
+}
+
+.line{
+    border: 1px solid black;
+    margin-top: 10px;
+}
