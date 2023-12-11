@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <script>
+            function Converter()
+            {
+                var amt = document.getElementById("a1").value 
+                let s1 = document.getElementById("s1").value
+                let s2 = document.getElementById("s2").value
+               
+                let output
+                if(s1==="rupee")
+                {
+                    if(s2==="dollar")
+                    output= amt*0.012;
+                    if(s2==="rupee")
+                    output=amt;
+                    if(s2==="yen")
+                    output=amt*1.74;
+                    if(s2==="pound")
+                    output=amt*0.0096;
+                    if(s2==="euro")
+                    output=amt*0.011;
+                }
+
+                if(s1==="dollar")
+                {
+                    if(s2==="dollar")
+                    output= amt;
+                    if(s2==="rupee")
+                    output=amt*83.4;
+                    if(s2==="yen")
+                    output=amt*144.86;
+                    if(s2==="pound")
+                    output=amt*0.80;
+                    if(s2==="euro")
+                    output=amt*0.93;
+                }
+
+                if(s1==="yen"){
+                if(s2==="dollar")
+                output= amt*0.0069;
+                if(s2==="rupee")
+                output=amt*0.58;
+                if(s2==="yen")
+                output=amt;
+                if(s2==="pound")
+                output=amt*0.0055;
+                if(s2==="euro")
+                output=amt*0.0064;
+                }
+
+                if(s1==="pound"){
+                if(s2==="dollar")
+                output= amt*1.25;
+                if(s2==="rupee")
+                output=amt*104.69;
+                if(s2==="yen")
+                output=amt*181.78;
+                if(s2==="pound")
+                output=amt;
+                if(s2==="euro")
+                output=amt*1.16;
+                }
+
+                if(s1==="euro"){
+                if(s2==="dollar")
+                output= amt*1.08;
+                if(s2==="rupee")
+                output=amt*88.88;
+                if(s2==="yen")
+                output=amt*156.09;
+                if(s2==="pound")
+                output=amt*0.86;
+                if(s2==="euro")
+                output=amt;
+                }
+                let result=output
+                document.getElementById("sp1").innerHTML=result;
+            }
+
+        </script>
+    </head>
+    <body>
+        <br><br><br>
+        <fieldset align="center">
+            <label for ="num">Amount : </label>
+            <input type ="number" id="a1" name="num"/><br><br>
+
+            <select id="s1">
+                <option>From</option>
+                <option>rupee</option>
+                <option>dollar</option>
+                <option>yen</option>
+                <option>pound</option>
+                <option>euro</option>
+            </select>
+            <select id="s2">
+                <option> To</option>
+                <option>rupee</option>
+                <option>dollar</option>
+                <option>yen</option>
+                <option>pound</option>
+                <option>euro</option>
+            </select>
+            <input type ="button" value="Convert" onclick="Converter()"/>
+        </fieldset>
+        <p> Conversion of Amount is : <span id="sp1"></span></p>
+    </body>
+</html>

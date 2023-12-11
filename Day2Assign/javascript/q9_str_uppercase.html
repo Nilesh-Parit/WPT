@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title> String Case Manipulation</title>
+        <script>
+            function f1()
+            {
+                let inputstring= document.getElementById("i1").value
+                let upperstr = inputstring.toUpperCase()
+                document.getElementById("p1").innerHTML=upperstr
+            }
+            function f2()
+            {
+                let inputstring= document.getElementById("i1").value;
+                let lowerstr = inputstring.toLowerCase()
+                document.getElementById("p2").innerHTML=lowerstr
+            }
+            function f3()
+            {
+                let inputstring = document.getElementById("i1").value;
+                let fst = inputstring.charAt(0).toUpperCase()
+                let lst = inputstring.substring(1).toLowerCase()
+                document.getElementById("p3").innerText=fst+lst
+            } 
+            var s3=""
+            function f4()
+            {
+                let inputstr = document.getElementById("i2").value
+                let name =inputstr.split(" ")
+                console.log(name)
+                name.forEach(e=> {
+
+                   let s1= e.charAt(0).toUpperCase();
+                   let s2 = e.substring(1).toLowerCase();
+                   s3 = s3+" "+s1+s2;
+                });
+
+                let fst1 = inputstr.charAt(0).toUpperCase()
+                let lst1 = inputstr.substring(1).toLowerCase()
+                document.getElementById("p4").innerText=s3
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Enter Word : <input id="i1" type="text"></h1>
+        <input type="button" value="show uppercase" onclick="f1()">
+        <p><b>UpperCase: <span id="p1"> </span></b></p>
+        <input type="button" value="show Smallcase" onclick="f2()">
+        <p><b>Smallcase: <span id="p2"> </span></b></p>
+        <input type="button" value="show Titlecase" onclick="f3()">
+        <p><b>Titlecase: <span id="p3"> </span></b></p><br>
+        <h1>Enter Sentence: <input id="i2" type="text"></h1>
+        <input type="button" value="show sentence case" onclick="f4()">
+        <p><b>Sentence case: <span id="p4"> </span></b></p>
+    </body>
+</html>

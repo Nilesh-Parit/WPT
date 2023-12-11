@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Calculator</title>
+    <script>
+      function cal() {
+        let i1 = parseInt(document.getElementById("i1").value);
+        let i2 = parseInt(document.getElementById("i2").value);
+        let op = document.getElementById("s1").value;
+        // let op = parseInt(document.getElementById("s1").value);
+        var res;
+        console.log(res);
+        switch (op) {
+          case '+':
+            res = i1 + i2;
+            console.log(res);
+            break;
+          case '-':
+            res = i1 - i2;
+            console.log(res);
+            break;
+          case '*':
+            res = i1 * i2;
+            console.log(res);
+            break;
+          case '/':
+            res = i1 / i2;
+            console.log(res);
+            break;
+        }
+        // switch (op) {
+        //   case 1:
+        //     res = i1 + i2;
+        //     console.log(res);
+        //     break;
+        //   case 2:
+        //     res = i1 - i2;
+        //     console.log(res);
+        //     break;
+        //   case 3:
+        //     res = i1 * i2;
+        //     console.log(res);
+        //     break;
+        //   case 4:
+        //     res = i1 / i2;
+        //     console.log(res);
+        //     break;
+        // }
+        console.log(res);
+        document.getElementById("p1").innerHTML = res;
+      }
+    </script>
+  </head>
+  <body>
+    <label> Enter number : <input type="number" id="i1" /> </label>
+    <br>
+    <label> Enter number :<input type="number" id="i2" /> </label>
+    <br>
+    <select id="s1" onchange="cal()">
+      <option>select</option>
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <!-- <option value="1">+</option>
+      <option value="2">-</option>
+      <option value="3">*</option>
+      <option value="4">/</option> -->
+    </select>
+
+    <p id="p1"></p>
+  </body>
+</html>

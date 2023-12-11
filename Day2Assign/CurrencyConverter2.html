@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <script>
+            function Converter(){
+                var amt = document.getElementById("a1").value 
+              
+                let s1 = parseInt(document.getElementById("s1").value);
+                
+                let s2 = parseInt(document.getElementById("s2").value);
+                let output
+                if(s1===1){
+                     if(s2===2)
+                       output= amt*0.012;
+                     if(s2===1)
+                     output=amt;
+                    if(s2===3)
+                    output=amt*1.74;
+                    if(s2===4)
+                    output=amt*0.0096;
+                    if(s2===5)
+                    output=amt*0.011;
+
+                }
+
+                if(s1===2){
+                     if(s2===2)
+                       output= amt;
+                     if(s2===1)
+                     output=amt*83.4;
+                    if(s2===3)
+                    output=amt*144.86;
+                    if(s2===4)
+                    output=amt*0.80;
+                    if(s2===5)
+                    output=amt*0.93;
+
+                }
+
+                if(s1===3){
+                     if(s2===2)
+                       output= amt*0.0069;
+                     if(s2===1)
+                     output=amt*0.58;
+                    if(s2===3)
+                    output=amt;
+                    if(s2===4)
+                    output=amt*0.0055;
+                    if(s2===5)
+                    output=amt*0.0064;
+
+                }
+
+                if(s1===4){
+                     if(s2===2)
+                       output= amt*1.25;
+                     if(s2===1)
+                     output=amt*104.69;
+                    if(s2===3)
+                    output=amt*181.78;
+                    if(s2===4)
+                    output=amt;
+                    if(s2===5)
+                    output=amt*1.16;
+
+                }
+                if(s1===5){
+                     if(s2===2)
+                       output= amt*1.08;
+                     if(s2===1)
+                     output=amt*88.88;
+                    if(s2===3)
+                    output=amt*156.09;
+                    if(s2===4)
+                    output=amt*0.86;
+                    if(s2===5)
+                    output=amt;
+
+                }
+                let result=output
+                document.getElementById("sp1").innerHTML=result;
+            }
+        </script>
+    </head>
+    <body>
+        <br><br><br>
+        <fieldset align="center">
+            <label for ="num">Amount : </label>
+            <input type ="number" id="a1" name="num"/><br><br>
+
+            <select id="s1">
+                <option>From</option>
+                <option value="1">&#x20B9</option>//hexa value
+                <option value="2">&dollar;</option>
+                <option value="3">&yen;</option>
+                <option value="4">&pound;</option>
+                <option value="5">&euro;</option>
+            </select>
+            <select id="s2">
+                <option> To</option>
+                <option value="1">&#x20B9</option>//hexa value
+                <option value="2">&dollar;</option>
+                <option value="3">&yen;</option>
+                <option value="4">&pound;</option>
+                <option value="5">&euro;</option>
+            </select>
+            <input type ="button" value="Convert" onclick="Converter()"/>
+        </fieldset>
+        <p> Conversion of Amount is : <span id="sp1"></span></p>
+    </body>
+</html>
