@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            Form 
+        </title>
+
+        <script>
+
+            
+
+            function validate(){
+
+                let u = document.getElementById("user").value;
+                let p=  document.getElementById("pass").value;
+                console.log(u )
+                console.log(p )
+
+                if(u=="iet"&& p=="123"){
+                    document.getElementById("p1").innerHTML="Welcome"
+                }
+                
+                else if(u=="cdac"&& p=="456"){
+                    document.getElementById("p1").innerHTML="Welcome"
+                }
+                
+                else if(u=="software"&& p=="789"){
+                    document.getElementById("p1").innerHTML="Welcome"
+                }
+                else{
+                    document.getElementById("user").innerHTML=" "
+                    document.getElementById("pass").innerHTML=" "
+                    document.getElementById("p2").innerHTML="Error"
+
+                }
+               
+
+            }
+        </script>
+    </head>
+    <body>
+
+        <fieldset>
+            <legend>
+                Form 
+            </legend>
+            <form name="myfrom">
+
+                Enter FirstName :<input type="text" id="nm"/><br><br>
+                Enter LastName :<input type="text" id="lm"/><br><br>
+                Enter Address :<input type="text" id="lm"/><br><br>
+
+
+
+                Enter UserName :<input type="text" name="nm" id="user"/> <br><br>
+                Enter Passsword :<input type ="password" name="ps" id ="pass"/> <br><br>
+                <input type ="button" value="login"  onclick="validate()"/> <br><br>
+                <!-- <button type="submit" onclick="validate()" >Login</button> -->
+                   
+             </form>
+
+            <p id="p1" ></p>
+           <p id="p2" style="color: red;" ></p>
+        </fieldset>
+
+
+        
+    </body>
+</html>
